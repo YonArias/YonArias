@@ -1,0 +1,257 @@
+/* Importanto fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto-mono', monospace;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* general */
+a {
+    text-decoration: none;
+    color: rgb(228, 220, 220);
+}
+/* Pagina principal */
+.main-container {
+    background-color: #131313;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+/* Card de titulo con el borde colorido */
+.main-container .container-title {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-title .card-borde {
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,0.9907192575406032) 1%, rgba(255,224,0,1) 47%, rgba(255,15,249,1) 100%);
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+.container-title .card {
+    display: flex;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    justify-content: center;
+}
+.main-container .container-title h2 {
+    font-size: 2em;
+    text-align: center;
+    color: rgb(228, 220, 220);
+    margin: 20px;
+}
+/* Card de los metodos */
+.container-metodos {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 100px;
+    width: 70%;
+    max-width: 400px;
+    justify-self: center;
+}
+.container-metodos::-webkit-scrollbar {
+    display: none;
+}
+.container-metodos .card-border {
+    scroll-snap-align: center;
+    background: rgb(157,251,2);
+    background: linear-gradient(90deg, rgba(157,251,2,0.9907192575406032) 1%, rgba(0,255,246,1) 47%, rgba(255,15,249,1) 100%);
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+}
+.container-metodos .first {
+    margin-left: 50px;
+}
+.container-metodos .last {
+    margin-right: 50px;
+}
+/* Personalizando el interior de cada tarjeta */
+.container-metodos .card-border div {
+    position: relative;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.container-metodos .card-border p {
+    color:rgb(228, 220, 220);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 15px;
+    text-align: center;
+    width: 85%;
+    justify-self: center;
+}
+.container-metodos .card-border a {
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid white;
+    width: 150px;
+    justify-self: center;
+    padding: 20px 0;
+}
+
+/* Estilos para cada metodo en su pagina */
+/* Encabezado */
+.metodo-container {
+    background-color:#1f1f1f;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    padding-top: 20px;
+}
+.teoria-container .nav-metodo {
+    background: rgb(183,251,2);
+    background: linear-gradient(90deg, rgba(183,251,2,0.9907192575406032) 1%, rgba(255,188,0,1) 47%, rgba(255,31,15,1) 100%);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 5px;
+    height: 80px;
+    justify-self: center;
+}
+.teoria-container .nav-metodo div {
+    position: relative;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 80px;
+}
+.teoria-container .nav-metodo a {
+    display: flex;
+    justify-content: center;
+}
+.teoria-container .nav-metodo a img{
+    width: 25px;
+}
+.teoria-container .nav-metodo p {
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+/* Desarrollado el body del card*/
+.body-metodo {
+    justify-self: center;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 100px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container .border-card {
+    scroll-snap-align: center;
+    background: rgb(183,251,2);
+    background: linear-gradient(90deg, rgba(183,251,2,0.9907192575406032) 1%, rgba(255,188,0,1) 47%, rgba(255,31,15,1) 100%);
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    min-width: 320px;
+    max-width: 500px;
+    height: 80%;
+    max-height: 500px;
+}
+.card-container .border-card:first-child {
+    margin-left: 100px;
+} 
+#resultado {
+    margin-right: 100px;
+}
+.card-container .card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 500px;
+}
+.card-container .title-card, .card-container form {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+}
+.card-container .title-card {
+    margin-bottom: 5px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Body del card, parte title*/
+.card-container .title-card p {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+/* Formulario de la card */
+.card-container form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-container form label {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    width: 260px;
+}
+.card-container form input {
+    border-radius: 5px;
+    background-color: #3f3f3f;
+    width: 200px;
+    height: 30px;
+    border: none;
+    box-shadow:2px 2px 3px rgba(100,100,100,0.5);
+    font-size: 16px;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.card-container .border-button {
+    background: rgb(183,251,2);
+    background: linear-gradient(90deg, rgba(183,251,2,0.9907192575406032) 1%, rgba(255,188,0,1) 47%, rgba(255,31,15,1) 100%);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.card-container .border-button div {
+    background: #1f1f1f;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

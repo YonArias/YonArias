@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuPrincipal</title>
+   <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <main class="teoria-container metodo-container">
+        <section class="nav-metodo">
+            <div>
+                <a href="./index.html"><img src="./src/flecha-regreso.svg" alt="before"></a>
+                <p>Teoria de colas</p>
+                <a href="./grupo2.html"><img src="./src/flecha-ida.svg" alt="after"></a>
+            </div>
+        </section>
+        <section class="body-metodo">
+            <article class="card-container" id="calcular">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Ingresar Datos</p>
+                        </section>
+                        <form action="">
+                            <input type="text" id="tiempol" placeholder="Tiempo de llegadas">
+                            <input type="text" id="tiempos" placeholder="Tiempo de servicios">
+                            <input type="text" id="pobla" placeholder="Población">
+                            <input type="text" id="numbers" placeholder="Numero de Servidores">
+                            <input type="text" id="cservi" placeholder="Costo un tecnico servicio">
+                            <input type="text" id="cinacti" placeholder="Costo de inactividad">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#resultado" onclick="calculargrupo1()">Calcular</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-container" id="resultado">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Resultado</p>
+                        </section>
+                        <form action="">
+                            <label for="">Probabilidad que no hay unidades en sistema</label>
+                            <input type="text" id="po">
+                            <label for="">Numero de unidades en espera</label>
+                            <input type="text" id="lq">
+                            <label for="">Numero de unidades en el sistema</label>
+                            <input type="text" id="l">
+                            <label for="">Tiempo de una unidad en espera</label>
+                            <input type="text" id="wq">
+                            <label for="">Costo total</label>
+                            <input type="text" id="ct">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#calcular">Regresar</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>
