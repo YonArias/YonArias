@@ -7,6 +7,7 @@
     <title>MenuPrincipal</title>
    <link rel="stylesheet" href="./css/main.css">
    <link rel="stylesheet" href="./css/responsive.css">
+   <script defer src="https://app.embed.im/snow.js"></script>
 </head>
 <body>
     <main class="teoria-container metodo-container">
@@ -25,16 +26,16 @@
                             <p>Ingresar Datos</p>
                         </section>
                         <form action="">
-                            <input type="text" autocomplete="on" placeholder="Tiempo de llegadas">
-                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
-                            <input type="text" autocomplete="on" placeholder="Población">
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                            <input type="text" id="tiempol" placeholder="Tiempo de llegadas">
+                            <input type="text" id="tiempos" placeholder="Tiempo de servicios">
+                            <input type="text" id="pobla" placeholder="Población">
+                            <input type="text" id="n" placeholder="Valor n">
                         </form>
                     </div>
                 </div>
                 <div class="border-button">
                     <div>
-                        <a href="#resultado">Calcular</a>
+                        <a href="#resultado" onclick="calculargrupo2()">Calcular</a>
                     </div>
                 </div>
             </article>
@@ -45,16 +46,20 @@
                             <p>Resultado</p>
                         </section>
                         <form action="">
-                            <label for="">Probabilidad que no hay unidades en sistema</label>
-                            <input type="text" autocomplete="on" placeholder="">
-                            <label for="">Numero de unidades en espera</label>
-                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
-                            <label for="">Numero de unidades en el sistema</label>
-                            <input type="text" autocomplete="on" placeholder="Población">
-                            <label for="">Tiempo de una unidad en espera</label>
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
-                            <label for="">Costo total</label>
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                            <label for="">Probabilidad que no hay unidades en sistema (Po)</label>
+                            <input type="text" id="po">
+                            <label for="">Numero de unidades en espera (Lq)</label>
+                            <input type="text" id="lq">
+                            <label for="">Numero de unidades en el sistema (Ls)</label>
+                            <input type="text" id="ls">
+                            <label for="">Tiempo de una unidad en espera (Wq)</label>
+                            <input type="text" id="wq">
+                            <label for="">Tiempo de unidad en el sistema (Ws)</label>
+                            <input type="text" id="ws">
+                            <label for="">Probabilidad de que una unidad tenga que esperar (Pw)</label>
+                            <input type="text" id="pw">
+                            <label for="">Probabilidad de n unidades en el sistema (Pn)</label>
+                            <input type="text" id="pn">
                         </form>
                     </div>
                 </div>
@@ -66,6 +71,6 @@
             </article>
         </section>
     </main>
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

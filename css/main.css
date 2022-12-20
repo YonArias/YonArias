@@ -1,5 +1,8 @@
 /* Importanto fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+* {
+    --white-letra: #757575;
+}
 
 body {
     font-family: 'Roboto-mono', monospace;
@@ -97,7 +100,7 @@ a {
     align-items: center;
 }
 .container-metodos .card-border p {
-    color:rgb(228, 220, 220);
+    color: white;
     font-size: 1.2em;
     font-weight: bold;
     margin: 15px;
@@ -186,14 +189,14 @@ a {
 .card-container .border-card:first-child {
     margin-left: 100px;
 } 
-#resultado {
+#resultado, #siguiente {
     margin-right: 100px;
 }
 .card-container .card {
     position: relative;
     display: grid;
     grid-template-rows: 1fr 10fr;
-    height: 500px;
+    height: 100%;
 }
 .card-container .title-card, .card-container form {
     background-color: #1f1f1f;
@@ -208,20 +211,23 @@ a {
 }
 /* Body del card, parte title*/
 .card-container .title-card p {
-    color: white;
+    color: var(--white-letra);
     font-weight: bold;
+    font-size: 18px;
     margin: 0;
+    text-align: center;
 }
 /* Formulario de la card */
-.card-container form {
+#calcular form {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90%;
 }
 .card-container form label {
-    color: white;
+    color: var(--white-letra);
     text-align: center;
     font-size: 16px;
     width: 260px;
@@ -239,6 +245,32 @@ a {
     margin-bottom: 20px;
     font-weight: bold;
 }
+#resultado form {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#resultado form label{
+    text-align: start;
+    width: 210px;
+}
+#resultado form input, #siguiente form input {
+    width: 50px;
+}
+#siguiente form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#siguiente form label {
+    width: 100px;
+    justify-self: end;
+    color: white;
+}
 .card-container .border-button {
     background: rgb(183,251,2);
     background: linear-gradient(90deg, rgba(183,251,2,0.9907192575406032) 1%, rgba(255,188,0,1) 47%, rgba(255,31,15,1) 100%);
@@ -254,4 +286,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.card-container .border-button div a {
+    color: var(--white-letra);
+    font-weight: bold;
+    font-size: 18px;
 }

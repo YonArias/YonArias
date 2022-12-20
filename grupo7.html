@@ -7,6 +7,7 @@
     <title>MenuPrincipal</title>
    <link rel="stylesheet" href="./css/main.css">
    <link rel="stylesheet" href="./css/responsive.css">
+   <script defer src="https://app.embed.im/snow.js"></script>
 </head>
 <body>
     <main class="teoria-container metodo-container">
@@ -25,16 +26,15 @@
                             <p>Ingresar Datos</p>
                         </section>
                         <form action="">
-                            <input type="text" autocomplete="on" placeholder="Tiempo de llegadas">
-                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
-                            <input type="text" autocomplete="on" placeholder="Población">
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                            <input type="text" id="landa" placeholder="Tasa de llegada (λ)">
+                            <input type="text" id="u" placeholder="Tasa de servicio (μ)">
+                            <input type="text" id="k" placeholder="Numero de canales (k)">
                         </form>
                     </div>
                 </div>
                 <div class="border-button">
                     <div>
-                        <a href="#resultado">Calcular</a>
+                        <a href="#resultado" onclick="calculargrupo7()">Calcular</a>
                     </div>
                 </div>
             </article>
@@ -45,17 +45,24 @@
                             <p>Resultado</p>
                         </section>
                         <form action="">
-                            <label for="">Probabilidad que no hay unidades en sistema</label>
-                            <input type="text" autocomplete="on" placeholder="">
-                            <label for="">Numero de unidades en espera</label>
-                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
-                            <label for="">Numero de unidades en el sistema</label>
-                            <input type="text" autocomplete="on" placeholder="Población">
-                            <label for="">Tiempo de una unidad en espera</label>
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
-                            <label for="">Costo total</label>
-                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                            <label for="">Probabilidad que no hay unidades en sistema (Po)</label>
+                            <input type="text" id="po">
+                            <label for="">Numero de unidades en cola (Lq)</label>
+                            <input type="text" id="lq">
+                            <label for="">Numero de unidades en el sistema (Ls)</label>
+                            <input type="text" id="ls">
+                            <label for="">Tiempo promedio que una unidad para en la cola (Wq)</label>
+                            <input type="text" id="wq">
+                            <label for="">Tiempo promedio que una unidad pasa en el sistema (W)</label>
+                            <input type="text" id="w">
+                            <label for="">Probabilidad de que una unidad espere por el servicio (Pw)</label>
+                            <input type="text" id="Pw">
                         </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#siguiente">Siguiente</a>
                     </div>
                 </div>
                 <div class="border-button">
@@ -64,8 +71,34 @@
                     </div>
                 </div>
             </article>
+            <article class="card-container" id="siguiente">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Probabilidad de que haya N unidades en cola</p>
+                        </section>
+                        <form action="">
+                            <label for="">P0</label>
+                            <input type="text" id="p1">
+                            <label for="">P1</label>
+                            <input type="text" id="p2">
+                            <label for="">P2</label>
+                            <input type="text" id="p3">
+                            <label for="">P3</label>
+                            <input type="text" id="p4">
+                            <label for="">P4</label>
+                            <input type="text" id="p5">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#resultado">Anterior</a>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
