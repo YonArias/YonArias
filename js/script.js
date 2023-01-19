@@ -242,7 +242,33 @@ function calculargrupo7(){
 }
 
 function calculargrupo8(){
-    
+    var tiempo_llegada =  parseFloat(document.getElementById("tiempol").value);
+    var tiempo_servicio = parseFloat(document.getElementById("tiempos").value);
+    var number_servicio = parseFloat(document.getElementById("numbers").value);
+
+    // Probabilidad de que no hay unidades en el sistema (Po)
+    var po = (1 - (tiempo_llegada / tiempo_servicio));
+    // Numero promedio de unidades en la linea de espera (Lq)
+    var lq = (Math.pow(tiempo_llegada, 2) / (tiempo_servicio * (tiempo_servicio - tiempo_llegada)));
+    // Numero promedio de unidades en el sistema (L)
+    var l = (lq + (tiempo_llegada / tiempo_servicio));
+    // Tiempo promedio que la unidad pasa en la linea de espera (Wq)
+    var wq = (lq / tiempo_llegada);
+    // Tiempo promedio que una unidad pasa en la linea de espera (W)
+    var w = (wq + (1 / tiempo_servicio));
+    // Probabilidad de que una unidad que llega no tenga que esperar a ser atendida (Pw)
+    var Pw = (tiempo_llegada / tiempo_servicio);
+    // Probabilidad de que haya n unidades en el sistema (Pn)
+    var Pn = (Math.pow((tiempo_llegada / tiempo_servicio), number_servicio) * po);
+
+    // Mostrar los valores en los input de resultado
+    document.getElementById("po").value = po.toFixed(2);
+    document.getElementById("lq").value = lq.toFixed(2);
+    document.getElementById("l").value = l.toFixed(2);
+    document.getElementById("wq").value = wq.toFixed(2);
+    document.getElementById("w").value = w.toFixed(2);
+    document.getElementById("Pw").value = Pw.toFixed(2);
+    document.getElementById("Pn").value = Pn.toFixed(2);
 }
 
 function factorial(number) {
